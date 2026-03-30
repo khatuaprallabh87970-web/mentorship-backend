@@ -10,7 +10,9 @@ const server = http.createServer(app);
 // Socket.io setup
 const io = new Server(server, {
   cors: {
-    origin: "*",
+    origin: "https://mentorship-frontend-sigma.vercel.app",
+    methods: ["GET", "POST"],
+    credentials: true,
   },
 });
 
